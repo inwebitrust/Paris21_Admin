@@ -2,17 +2,12 @@
 header('Access-Control-Allow-Origin: *');  
 
 
+//PARIS 21 NEEDS TO UPDATE THIS VALUES WITH THEIR SERVER CONFIG
 $selectedDB = 'paris21';
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = 'root';
 
-/*
-$dbhost = '192.168.1.2';
-$dbuser = 'anthony.gesec';
-$dbpass = '2xzQRixT5V';
-$selectedDB = 'ocde';
-*/
 
 $DBTABLES = array(
 	"indicators" => "indicators_mar2020",
