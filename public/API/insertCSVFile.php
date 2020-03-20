@@ -21,6 +21,24 @@ if(isset($_FILES["fileToUpload"])) {
             if(sizeof($columns) == 5) {
                $col4 = str_replace("\n","",$columns[4]);
                
+               if($columns[0] == "FRAGILE") $value = "9998";
+               else if($columns[0] == "LDC") $value = "9994";
+               else if($columns[0] == "SIDS") $value = "9997";
+               else if($columns[0] == "LANDLOCKED") $value = "9995";
+               else if($columns[0] == "Low income") $value = "9993";
+               else if($columns[0] == "Lower middle income") $value = "9992";
+               else if($columns[0] == "Upper middle income") $value = "9999";
+               else if($columns[0] == "High income") $value = "9996";
+
+               if($columns[1] == "FRAGILE") $value = "9998";
+               else if($columns[1] == "LDC") $value = "9994";
+               else if($columns[1] == "SIDS") $value = "9997";
+               else if($columns[1] == "LANDLOCKED") $value = "9995";
+               else if($columns[1] == "Low income") $value = "9993";
+               else if($columns[1] == "Lower middle income") $value = "9992";
+               else if($columns[1] == "Upper middle income") $value = "9999";
+               else if($columns[1] == "High income") $value = "9996";
+
                $queryInsertCSVData = "INSERT INTO ".$newTableID." VALUES ('".$columns[0]."', '".$columns[1]."', '".$columns[2]."', '".$columns[3]."', '".$col4."')";
                $link->query($queryInsertCSVData);
             }
