@@ -4785,7 +4785,7 @@ body {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     background: #fff;
-    width: 640px;
+    width: 660px;
     height: 360px; }
   #App[data-extracting="true"] #LoadingModalContainer {
     display: block; }
@@ -4806,6 +4806,12 @@ body {
   #App[data-source="csv"] .sourcedisplay[data-sourcedisplay="csv"] {
     display: inline-block !important; }
   #App[data-source="csv"] #Container .container_table .cell[data-cell="extraction"] {
+    width: 270px; }
+  #App[data-source="indicators"] #UploadBlockIndicators {
+    display: block; }
+  #App[data-source="indicators"] .sourcedisplay[data-sourcedisplay="indicators"] {
+    display: inline-block !important; }
+  #App[data-source="indicators"] #Container .container_table .cell[data-cell="extraction"] {
     width: 270px; }
 
 #LoadingModalContainer, #DeleteModalContainer, #UploadCSVModalContainer, #ComputeRegionsModalContainer {
@@ -4925,11 +4931,11 @@ body {
     margin-top: 10px; }
 
 #Sidebar {
-  width: 175px;
+  width: 200px;
   float: left;
   height: 100%;
   background: #2f2f2f;
-  padding: 20px; }
+  padding: 20px 14px; }
   #Sidebar .sidebar_sources {
     text-align: left; }
     #Sidebar .sidebar_sources .source_item {
@@ -4949,7 +4955,7 @@ body {
   text-align: left;
   padding: 20px;
   float: left; }
-  #Container #ExtractionBt, #Container #LaunchCSVBt {
+  #Container #ExtractionBt, #Container #LaunchCSVBt, #Container #LaunchIndicatorsBt {
     background: #ea6651;
     border: 0px solid;
     text-transform: uppercase;
@@ -4960,21 +4966,21 @@ body {
     font-family: "Roboto Condensed";
     font-weight: bold;
     border-radius: 20px; }
-    #Container #ExtractionBt:hover, #Container #LaunchCSVBt:hover {
+    #Container #ExtractionBt:hover, #Container #LaunchCSVBt:hover, #Container #LaunchIndicatorsBt:hover {
       background: #2f2f2f; }
   #Container #ExtractionBt {
     display: none; }
-  #Container #UploadBlock {
+  #Container #UploadBlock, #Container #UploadBlockIndicators {
     display: none;
     width: 390px; }
-    #Container #UploadBlock #LaunchCSVBt {
+    #Container #UploadBlock #LaunchCSVBt, #Container #UploadBlock #LaunchIndicatorsBt, #Container #UploadBlockIndicators #LaunchCSVBt, #Container #UploadBlockIndicators #LaunchIndicatorsBt {
       pointer-events: none;
       display: none; }
-      #Container #UploadBlock #LaunchCSVBt.enabled {
+      #Container #UploadBlock #LaunchCSVBt.enabled, #Container #UploadBlock #LaunchIndicatorsBt.enabled, #Container #UploadBlockIndicators #LaunchCSVBt.enabled, #Container #UploadBlockIndicators #LaunchIndicatorsBt.enabled {
         display: inline-block;
         pointer-events: all;
         opacity: 1; }
-    #Container #UploadBlock .custom-file-upload {
+    #Container #UploadBlock .custom-file-upload, #Container #UploadBlockIndicators .custom-file-upload {
       background: #ea6651;
       border: 0px solid;
       text-transform: uppercase;
@@ -4987,22 +4993,22 @@ body {
       cursor: pointer;
       font-family: "Roboto Condensed";
       font-weight: bold; }
-    #Container #UploadBlock #UploadCSVBt {
+    #Container #UploadBlock #UploadCSVBt, #Container #UploadBlock #UploadIndicatorsBt, #Container #UploadBlockIndicators #UploadCSVBt, #Container #UploadBlockIndicators #UploadIndicatorsBt {
       margin-top: 10px;
       display: none; }
-    #Container #UploadBlock #my_iframe {
+    #Container #UploadBlock #my_iframe, #Container #UploadBlock #my_iframe_indicators, #Container #UploadBlockIndicators #my_iframe, #Container #UploadBlockIndicators #my_iframe_indicators {
       width: 1px;
       height: 1px;
       border: 0px solid; }
-    #Container #UploadBlock #my_form .my_form_line {
+    #Container #UploadBlock #my_form .my_form_line, #Container #UploadBlock #my_form_codebook .my_form_line, #Container #UploadBlockIndicators #my_form .my_form_line, #Container #UploadBlockIndicators #my_form_codebook .my_form_line {
       height: 36px;
       width: 100%;
       display: none;
       margin-top: 10px;
       position: relative; }
-      #Container #UploadBlock #my_form .my_form_line.displayed {
+      #Container #UploadBlock #my_form .my_form_line.displayed, #Container #UploadBlock #my_form_codebook .my_form_line.displayed, #Container #UploadBlockIndicators #my_form .my_form_line.displayed, #Container #UploadBlockIndicators #my_form_codebook .my_form_line.displayed {
         display: block; }
-      #Container #UploadBlock #my_form .my_form_line #filename {
+      #Container #UploadBlock #my_form .my_form_line #filename, #Container #UploadBlock #my_form_codebook .my_form_line #filename, #Container #UploadBlockIndicators #my_form .my_form_line #filename, #Container #UploadBlockIndicators #my_form_codebook .my_form_line #filename {
         position: absolute;
         left: 110px;
         top: 50%;

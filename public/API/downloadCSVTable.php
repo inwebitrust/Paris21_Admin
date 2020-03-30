@@ -18,6 +18,9 @@ $resultRows = $link->query($queryTable);
 while($row = mysqli_fetch_array($resultRows)) {
     foreach ($row as $key => $value) {
     	if($key == "0" || $key == "1" || $key == "2" || $key == "3") {
+    		if($key == "0" || $key == "1") {
+    			
+    		}
     		$csv_export.= '"'.$value.'",';
     	} else if($key == "4") {
     		$csv_export.= '"'.$value.'"';

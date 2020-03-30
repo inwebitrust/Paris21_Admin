@@ -4,6 +4,7 @@ require_once("config.php");
 //GATHER CSV AND WORLDBANK DATABASE
 $CSVDATABASE = "";
 $WORLBANKDATABASE = "";
+$INDICATORSCODEBOOKDB = "indicators_mar2020";
 
 $queryExtractions = "SELECT * FROM ".$DBTABLES["extractions"]." WHERE active = 1" or die("Error in the consult.." . mysqli_error($link));
 $resultExtractions = $link->query($queryExtractions);
@@ -12,6 +13,8 @@ while($row = mysqli_fetch_assoc($resultExtractions)) {
     	$CSVDATABASE = "datavalues_csv_".$row["id"];
     } else if($row["source"] == "worldbank") {
     	$WORLBANKDATABASE = "datavalues_worldbank_".$row["id"];
+    } else if($row["source"] == "indicators") {
+    	$INDICATORSCODEBOOKDB = "indicators_".$row["id"];
     }
 }
 
@@ -32,7 +35,7 @@ while($row = mysqli_fetch_assoc($resultCountries)) {
 
 //GATHER INDICATORS
 $INDICATORS = array();
-$queryIndicators = "SELECT id, dataviz_type, datasource FROM ".$DBTABLES["indicators"]." WHERE final_list = 1" or die("Error in the consult.." . mysqli_error($link));
+$queryIndicators = "SELECT id, dataviz_type, datasource FROM ".$INDICATORSCODEBOOKDB." WHERE final_list = 1" or die("Error in the consult.." . mysqli_error($link));
 $resultIndicators = $link->query($queryIndicators);
 while($row = mysqli_fetch_assoc($resultIndicators)) {
     array_push($INDICATORS, $row);

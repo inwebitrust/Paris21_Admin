@@ -1,7 +1,6 @@
 <?php
 ini_set('upload_max_filesize', '10M');
 ini_set('post_max_size', '10M');
-
 ?>
 
 <!doctype html>
@@ -61,11 +60,13 @@ ini_set('post_max_size', '10M');
 				<div class="sidebar_sources">
 					<a class="source_item" data-source="worldbank">World Bank</a>
 					<a class="source_item" data-source="csv">CSV</a>
+					<a class="source_item" data-source="indicators">Codebook/Indicators</a>
 				</div>
 			</section>
 
 			<section id="Container">
 				<button id="ExtractionBt">Create new extraction</button>
+				
 				<div id="UploadBlock">
 					<form id="my_form" method="post" action="API/insertCSVFile.php" enctype="multipart/form-data">
 						<!--<input id="UploadCSVBt" type="file" name="fileToUpload" />-->
@@ -79,6 +80,22 @@ ini_set('post_max_size', '10M');
 							<span id="filename"></span>
 						</div>
 						<iframe id='my_iframe' name='my_iframe' src=""></iframe>
+					</form>
+				</div>
+
+				<div id="UploadBlockIndicators">
+					<form id="my_form_codebook" method="post" action="API/insertCodebookIndicators.php" enctype="multipart/form-data">
+						<!--<input id="UploadCSVBt" type="file" name="fileToUpload" />-->
+						<label for="UploadIndicatorsBt" class="custom-file-upload">
+						    Upload a new codebook (.csv)
+						</label>
+						<input id="UploadIndicatorsBt" type="file" name="fileToUpload" />
+						<input type="hidden" name="source" id="source" /><br />
+						<div class="my_form_line">
+							<button id="LaunchIndicatorsBt" type="button">Send file</button>
+							<span id="filenameIndicators"></span>
+						</div>
+						<iframe id='my_iframe_indicators' name='my_iframe_indicators' src=""></iframe>
 					</form>
 				</div>
 				

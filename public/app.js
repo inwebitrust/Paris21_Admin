@@ -158,11 +158,16 @@ var App = {
         this.$loadingbarNB = $(".modal_loadingbar_nb");
         this.$UploadCSVBt = $("#UploadCSVBt");
         this.$LaunchCSVBt = $("#LaunchCSVBt");
+        this.$UploadIndicatorsBt = $("#UploadIndicatorsBt");
+        this.$LaunchIndicatorsBt = $("#LaunchIndicatorsBt");
+
         this.$myIframe = $("#my_iframe");
+        this.$myIframeIndicators = $("#my_iframe_indicators");
         this.notFoundCountries = [];
 
         this.deletingRowID = "";
         this.localCSVFilePath = "";
+        this.localIndicatorsFilePath = "";
 
         this.indicator = "";
         this.selectedDatasource = "worldbank";
@@ -209,6 +214,12 @@ var App = {
             this.$LaunchCSVBt.addClass("enabled");
         }
 
+        if(this.localIndicatorsFilePath == "") {
+            this.$LaunchIndicatorsBt.removeClass("enabled");
+        } else {
+            this.$LaunchIndicatorsBt.addClass("enabled");
+        }
+
         this.updateTable();
 
         this.router.updateRoute();
@@ -252,19 +263,35 @@ var App = {
         this.$UploadCSVBt.on("change", function (){
             self.localCSVFilePath = $(this).val();
             $("#filename").html(self.localCSVFilePath);
-            $(".my_form_line").addClass("displayed");
+            $("#UploadBlock .my_form_line").addClass("displayed");
+            setTimeout(function(){
+                self.updateApp();
+            }, 10);
+        });
+
+        this.$UploadIndicatorsBt.on("change", function (){
+            self.localIndicatorsFilePath = $(this).val();
+            $("#filenameIndicators").html(self.localIndicatorsFilePath);
+            $("#UploadBlockIndicators .my_form_line").addClass("displayed");
             setTimeout(function(){
                 self.updateApp();
             }, 10);
         });
 
         this.$LaunchCSVBt.on("click", function (){
-            console.log("ici LaunchCSVBt??");
             document.getElementById('my_form').target = 'my_iframe';
             document.getElementById('my_form').submit();
             self.$App.attr("data-uploadingcsv", "true");
 
             self.CSVUploadingTest();
+        });
+
+        this.$LaunchIndicatorsBt.on("click", function (){
+            document.getElementById('my_form_codebook').target = '_blank';
+            document.getElementById('my_form_codebook').submit();
+            self.$App.attr("data-uploadingindicators", "true");
+
+            self.CSVUploadingIndicatorsTest();
         });
         
 
@@ -409,12 +436,29 @@ var App = {
             this.$UploadCSVBt.val("");
             this.localCSVFilePath = "";
             $("#filename").html("");
-            $(".my_form_line").removeClass("displayed");
+            $("#UploadBlock .my_form_line").removeClass("displayed");
             this.$myIframe.contents().find("body").html('');
             this.finishExtraction();
         } else {
             setTimeout(function (){
                 App.CSVUploadingTest();
+            }, 1000);
+        }
+    },
+
+    CSVUploadingIndicatorsTest: function () {
+        console.log("CSVUploadingIndicatorsTest");
+        if(this.$myIframeIndicators.contents().find("body").html().length > 10) {
+            this.$App.attr("data-uploadingindicators", "false");
+            this.$UploadIndicatorsBt.val("");
+            this.localIndicatorsFilePath = "";
+            $("#filenameIndicators").html("");
+            $("#UploadBlockIndicators .my_form_line").removeClass("displayed");
+            this.$myIframeIndicators.contents().find("body").html('');
+            this.finishExtraction();
+        } else {
+            setTimeout(function (){
+                App.CSVUploadingIndicatorsTest();
             }, 1000);
         }
     }
