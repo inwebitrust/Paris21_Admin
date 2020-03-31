@@ -4793,6 +4793,8 @@ body {
     display: block; }
   #App[data-uploadingcsv="true"] #UploadCSVModalContainer {
     display: block; }
+  #App[data-uploadingindicators="true"] #UploadIndicatorsModalContainer {
+    display: block; }
   #App[data-computingregions="true"] #ComputeRegionsModalContainer {
     display: block; }
   #App .sourcedisplay {
@@ -4814,7 +4816,7 @@ body {
   #App[data-source="indicators"] #Container .container_table .cell[data-cell="extraction"] {
     width: 270px; }
 
-#LoadingModalContainer, #DeleteModalContainer, #UploadCSVModalContainer, #ComputeRegionsModalContainer {
+#LoadingModalContainer, #DeleteModalContainer, #UploadCSVModalContainer, #ComputeRegionsModalContainer, #UploadIndicatorsModalContainer {
   position: fixed;
   left: 0px;
   top: 0px;
@@ -4822,16 +4824,16 @@ body {
   height: 100%;
   z-index: 10;
   display: none; }
-  #LoadingModalContainer.displayed, #DeleteModalContainer.displayed, #UploadCSVModalContainer.displayed, #ComputeRegionsModalContainer.displayed {
+  #LoadingModalContainer.displayed, #DeleteModalContainer.displayed, #UploadCSVModalContainer.displayed, #ComputeRegionsModalContainer.displayed, #UploadIndicatorsModalContainer.displayed {
     display: block; }
-  #LoadingModalContainer .modal_bg, #DeleteModalContainer .modal_bg, #UploadCSVModalContainer .modal_bg, #ComputeRegionsModalContainer .modal_bg {
+  #LoadingModalContainer .modal_bg, #DeleteModalContainer .modal_bg, #UploadCSVModalContainer .modal_bg, #ComputeRegionsModalContainer .modal_bg, #UploadIndicatorsModalContainer .modal_bg {
     background: rgba(255, 255, 255, 0.7);
     position: absolute;
     left: 0px;
     top: 0px;
     width: 100%;
     height: 100%; }
-  #LoadingModalContainer .modal_block, #DeleteModalContainer .modal_block, #UploadCSVModalContainer .modal_block, #ComputeRegionsModalContainer .modal_block {
+  #LoadingModalContainer .modal_block, #DeleteModalContainer .modal_block, #UploadCSVModalContainer .modal_block, #ComputeRegionsModalContainer .modal_block, #UploadIndicatorsModalContainer .modal_block {
     position: absolute;
     left: 50%;
     z-index: 100;
@@ -4848,7 +4850,7 @@ body {
     -webkit-box-shadow: 0px 0px 80px 0px #8c8c8c;
     -moz-box-shadow: 0px 0px 80px 0px #8c8c8c;
     box-shadow: 0px 0px 80px 0px #8c8c8c; }
-    #LoadingModalContainer .modal_block .modal_loader, #DeleteModalContainer .modal_block .modal_loader, #UploadCSVModalContainer .modal_block .modal_loader, #ComputeRegionsModalContainer .modal_block .modal_loader {
+    #LoadingModalContainer .modal_block .modal_loader, #DeleteModalContainer .modal_block .modal_loader, #UploadCSVModalContainer .modal_block .modal_loader, #ComputeRegionsModalContainer .modal_block .modal_loader, #UploadIndicatorsModalContainer .modal_block .modal_loader {
       background: url("images/ajax-loader.gif") no-repeat 0 0;
       background-size: 100% 100%;
       width: 24px;
@@ -4861,18 +4863,18 @@ body {
       -ms-transform: translate(-50%, 0);
       -webkit-transform: translate(-50%, 0);
       transform: translate(-50%, 0); }
-    #LoadingModalContainer .modal_block .modal_title, #DeleteModalContainer .modal_block .modal_title, #UploadCSVModalContainer .modal_block .modal_title, #ComputeRegionsModalContainer .modal_block .modal_title {
+    #LoadingModalContainer .modal_block .modal_title, #DeleteModalContainer .modal_block .modal_title, #UploadCSVModalContainer .modal_block .modal_title, #ComputeRegionsModalContainer .modal_block .modal_title, #UploadIndicatorsModalContainer .modal_block .modal_title {
       font-size: 14px;
       text-transform: uppercase; }
-    #LoadingModalContainer .modal_block .modal_text, #DeleteModalContainer .modal_block .modal_text, #UploadCSVModalContainer .modal_block .modal_text, #ComputeRegionsModalContainer .modal_block .modal_text {
+    #LoadingModalContainer .modal_block .modal_text, #DeleteModalContainer .modal_block .modal_text, #UploadCSVModalContainer .modal_block .modal_text, #ComputeRegionsModalContainer .modal_block .modal_text, #UploadIndicatorsModalContainer .modal_block .modal_text {
       margin-top: 40px;
       font-size: 14px;
       line-height: 18px; }
-    #LoadingModalContainer .modal_block .modal_loadingbar_nb, #DeleteModalContainer .modal_block .modal_loadingbar_nb, #UploadCSVModalContainer .modal_block .modal_loadingbar_nb, #ComputeRegionsModalContainer .modal_block .modal_loadingbar_nb {
+    #LoadingModalContainer .modal_block .modal_loadingbar_nb, #DeleteModalContainer .modal_block .modal_loadingbar_nb, #UploadCSVModalContainer .modal_block .modal_loadingbar_nb, #ComputeRegionsModalContainer .modal_block .modal_loadingbar_nb, #UploadIndicatorsModalContainer .modal_block .modal_loadingbar_nb {
       margin-top: 10px;
       height: 20px;
       line-height: 20px; }
-    #LoadingModalContainer .modal_block .modal_loadingbar, #DeleteModalContainer .modal_block .modal_loadingbar, #UploadCSVModalContainer .modal_block .modal_loadingbar, #ComputeRegionsModalContainer .modal_block .modal_loadingbar {
+    #LoadingModalContainer .modal_block .modal_loadingbar, #DeleteModalContainer .modal_block .modal_loadingbar, #UploadCSVModalContainer .modal_block .modal_loadingbar, #ComputeRegionsModalContainer .modal_block .modal_loadingbar, #UploadIndicatorsModalContainer .modal_block .modal_loadingbar {
       width: 100%;
       height: 14px;
       background: rgba(0, 0, 0, 0.2);
@@ -4880,7 +4882,7 @@ body {
       position: relative;
       overflow: hidden;
       margin-top: 4px; }
-      #LoadingModalContainer .modal_block .modal_loadingbar .bar_filling, #DeleteModalContainer .modal_block .modal_loadingbar .bar_filling, #UploadCSVModalContainer .modal_block .modal_loadingbar .bar_filling, #ComputeRegionsModalContainer .modal_block .modal_loadingbar .bar_filling {
+      #LoadingModalContainer .modal_block .modal_loadingbar .bar_filling, #DeleteModalContainer .modal_block .modal_loadingbar .bar_filling, #UploadCSVModalContainer .modal_block .modal_loadingbar .bar_filling, #ComputeRegionsModalContainer .modal_block .modal_loadingbar .bar_filling, #UploadIndicatorsModalContainer .modal_block .modal_loadingbar .bar_filling {
         background: #fff;
         position: absolute;
         left: 0px;
@@ -4906,7 +4908,7 @@ body {
         -ms-transition-delay: 0s;
         -webkit-transition-delay: 0s;
         transition-delay: 0s; }
-    #LoadingModalContainer .modal_block .modal_buttons .modal_bt, #DeleteModalContainer .modal_block .modal_buttons .modal_bt, #UploadCSVModalContainer .modal_block .modal_buttons .modal_bt, #ComputeRegionsModalContainer .modal_block .modal_buttons .modal_bt {
+    #LoadingModalContainer .modal_block .modal_buttons .modal_bt, #DeleteModalContainer .modal_block .modal_buttons .modal_bt, #UploadCSVModalContainer .modal_block .modal_buttons .modal_bt, #ComputeRegionsModalContainer .modal_block .modal_buttons .modal_bt, #UploadIndicatorsModalContainer .modal_block .modal_buttons .modal_bt {
       font-size: 14px;
       text-transform: uppercase;
       color: #fff;
@@ -4916,7 +4918,7 @@ body {
       font-weight: bold;
       line-height: 32px;
       font-family: "Roboto Condensed"; }
-      #LoadingModalContainer .modal_block .modal_buttons .modal_bt[data-bt="no"], #DeleteModalContainer .modal_block .modal_buttons .modal_bt[data-bt="no"], #UploadCSVModalContainer .modal_block .modal_buttons .modal_bt[data-bt="no"], #ComputeRegionsModalContainer .modal_block .modal_buttons .modal_bt[data-bt="no"] {
+      #LoadingModalContainer .modal_block .modal_buttons .modal_bt[data-bt="no"], #DeleteModalContainer .modal_block .modal_buttons .modal_bt[data-bt="no"], #UploadCSVModalContainer .modal_block .modal_buttons .modal_bt[data-bt="no"], #ComputeRegionsModalContainer .modal_block .modal_buttons .modal_bt[data-bt="no"], #UploadIndicatorsModalContainer .modal_block .modal_buttons .modal_bt[data-bt="no"] {
         background: #fff;
         width: 56px;
         height: 30px;

@@ -287,7 +287,7 @@ var App = {
         });
 
         this.$LaunchIndicatorsBt.on("click", function (){
-            document.getElementById('my_form_codebook').target = '_blank';
+            document.getElementById('my_form_codebook').target = 'my_iframe_indicators';
             document.getElementById('my_form_codebook').submit();
             self.$App.attr("data-uploadingindicators", "true");
 

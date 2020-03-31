@@ -48,6 +48,13 @@ ini_set('post_max_size', '10M');
 					<div class="modal_text">Uploading CSV<br />Please wait...</div>
 				</div>
 			</section>
+			<section id="UploadIndicatorsModalContainer">
+				<div class="modal_bg"></div>
+				<div class="modal_block">
+					<div class="modal_loader"></div>
+					<div class="modal_text">Uploading Indicators<br />Please wait...</div>
+				</div>
+			</section>
 			<section id="ComputeRegionsModalContainer">
 				<div class="modal_bg"></div>
 				<div class="modal_block">
