@@ -1,0 +1,62 @@
+key,fr,en
+key,fr,en
+app-titre,Sur la piste des œuvres antiques,Following ancient works
+home-intro,"Ce sont de <span class='introHigh'>véritables périples</span> qu’ont connus certaines œuvres de l’antiquité, <span class='introHigh'>enfouies pendant des siècles</span> avant d’être découvertes, vendues, données, passant de collections en collections jusqu’aux vitrines des musées actuels. Un patient travail autour de leurs <span class='introHigh'>ventes aux enchères</span> permet de <span class='introHigh'>retrouver aujourd’hui<br>ces histoires croisées</span>, dont certaines sont ici dévoilées. ","These are true journeys that have seen some works of antiquity, buried for centuries before being discovered, sold, given, from collections to collections to the showcases of current museums. A patient works around their auctions to find today these cross stories, some of which are here unveiled."
+decouvrir-une-histoire,Découvrir un parcours,Discover a story
+explorer-nos-donnes,Explorer nos données,Explore our data
+les-coulisses,Les coulisses,Behind the scenes
+credits,Crédits,Credits
+telecharger-les-donnes,Télécharger les données,Download data
+la-creation,La création,Creation
+la-decouverte,La découverte,Discovery
+les-ventes,Les ventes,Sales
+la-conservation,Le musée,The Museum
+vers-la-creation,Vers la création,
+vers-la-decouverte,Vers la découverte,
+vers-les-ventes,Vers les ventes,
+vers-la-conservation,Vers le musée,
+antiquites,antiquités,antiquities
+vente,vente,sale
+type,type,type
+matiere,matière,material
+date-de-creation,Date de création,Creation date
+valeur-de-derniere-vente,Valeur dernière vente,Last sale value
+etat-des-connaissances,État des connaissances,Knowledge state
+annuler,annuler,cancel
+entre,Entre,Between
+et,et,and
+voir-son-histoire,Voir son histoire,Object story
+header-title,Sur la piste des œuvres antiques,Following antiquities
+toutes-les-oeuvres,Toutes les œuvres,Every artworks
+toutes-les-oeuvres-intro,Parcourir les œuvres antiques passées dans les ventes publiques françaises du XIX<sup>e</sup> siècle et traitées progressivement par le programme de recherche.,Browse ancient works listed in the French public sales of the 19th century and progressively processed by the research program.
+les-acteurs,Les acteurs,The players
+les-acteurs-intro,"Découvrir les personnalités des collectionneurs, acheteurs, vendeurs qui interviennent dans ce marché de l’art parisien du XIX<sup>e</sup> siècle.","Discover the personalities of collectors, buyers, sellers who are involved in this market of Paris art of the 19th century."
+la-valeur,La valeur,Value
+la-valeur-intro,Retrouver les valeurs successives attachées aux œuvres antiques au XIX<sup>e</sup> siècle.,Find the successive values ​​attached to ancient works in the 19th century.
+decouvrir-une-histoire,Découvrir une histoire,Discover a story
+selection-de-dix-oeuvres,Découvrez notre sélection de 10 œuvres aux parcours atypiques,Discover our selection of 10 artworks with atypical journey
+voir-son-histoire,Voir son parcours,Discover it's story
+filtrer-par,Filtrer par,Filter by
+trier-par,Trier par,Sort by
+vente-suivante,Vente suivante,Next sale
+vers-vente-suivante,Vers la vente suivante,
+decouvrir-une-autre-histoire,Découvrir une autre histoire,Discover another story
+tous,Tous,All
+avec-photo,Avec photo,With pictures
+information-manquante,Information manquante,Missing information
+bientot-disponible,Bientôt disponible,Coming soon
+voir,Voir,See
+modal-etat-connaissances-text1,"Cet indicateur reflète le nombre de données disponibles par objet. Pour le calculer, nous regardons si sont connus pour l’objet : ",
+modal-etat-connaissances-text2,"sa date et son lieu de <span class='txt_color' data-color='yellow'>création</span>,<br />
+son lieu de <span class='txt_color' data-color='orange'>découverte</span>,<br />
+son lieu de <span class='txt_color' data-color='blue'>conservation</span> actuelle<br />
+Et au moins une <span class='txt_color' data-color='pink'>vente</span>.",
+modal-etat-connaissances-text3,"Si l’objet rempli ces cinq conditions,
+l’état des connaissances est de 3/3. ",
+modal-etat-connaissances-text4,"Si il rempli trois ou quatre de ces conditions, l’état des connaissances est de 2/3. ",
+modal-etat-connaissances-text5,"En deçà,  il est à 1/3.",
+scroller,Scroller pour dérouler l’histoire,
+antiquite,antiquité,
+ouvres-antiques,œuvres antiques,
+ouvre-antique,œuvre antique,
+decouvrir-un-parcours,Découvrir un parcours,
